@@ -89,7 +89,7 @@ export default function Home() {
         <AnimatedMapBackground />
         
         <motion.div 
-          className="relative z-20 text-center max-w-4xl mx-auto sticky top-24 md:top-36"
+          className="relative z-20 text-center max-w-4xl mx-auto md:sticky md:top-36"
           initial="initial"
           animate="animate"
           variants={stagger}
@@ -130,7 +130,7 @@ export default function Home() {
         </motion.div>
 
         {/* Floating Mockups Area */}
-        <div className="mt-12 md:mt-20 relative h-[300px] sm:h-[360px] md:h-[600px] w-full max-w-5xl mx-auto z-30 pointer-events-none md:sticky md:top-96">
+        <div className="mt-24 md:mt-20 relative h-[300px] sm:h-[360px] md:h-[600px] w-full max-w-5xl mx-auto z-30 pointer-events-none md:sticky md:top-96">
           <motion.div 
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0, y: 0, rotate: -10 }}
             transition={{ duration: 1, delay: 0.4, type: "spring" }}
             style={{ y: yLeft, opacity: opacitySide }}
-            className="absolute left-[10%] md:left-[5%] bottom-10 w-[240px] md:w-[280px] h-[400px] bg-slate-900 rounded-[32px] shadow-2xl border-[6px] border-slate-800 hidden sm:block p-6 pointer-events-auto"
+            className="absolute left-[10%] md:left-[5%] bottom-10 w-[240px] md:w-[280px] h-[400px] bg-slate-900 rounded-[32px] shadow-2xl border-[6px] border-slate-800 hidden md:block p-6 pointer-events-auto"
           >
              <div className="w-20 h-4 bg-slate-800 mx-auto rounded-full mb-8"></div>
              <div className="space-y-4">
@@ -189,7 +189,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0, y: 0, rotate: 10 }}
             transition={{ duration: 1, delay: 0.6, type: "spring" }}
             style={{ y: yRight, opacity: opacitySide }}
-            className="absolute right-[10%] md:right-[5%] bottom-20 w-[240px] md:w-[280px] h-[450px] bg-white rounded-[32px] shadow-2xl border-[6px] border-slate-100 hidden sm:block p-6 pointer-events-auto z-20"
+            className="absolute right-[10%] md:right-[5%] bottom-20 w-[240px] md:w-[280px] h-[450px] bg-white rounded-[32px] shadow-2xl border-[6px] border-slate-100 hidden md:block p-6 pointer-events-auto z-20"
           >
              <div className="w-20 h-4 bg-slate-200 mx-auto rounded-full mb-8"></div>
              
