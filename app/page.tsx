@@ -65,8 +65,7 @@ export default function Home() {
             <a href="#features" className="hover:text-slate-900 transition-colors">Features</a>
             <a href="#screenshots" className="hover:text-slate-900 transition-colors">Screenshots</a>
             <Link href="/manual" className="hover:text-slate-900 transition-colors">Manual</Link>
-            <a href="#faq" className="hover:text-slate-900 transition-colors">FAQ</a>
-            <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
+            <a href="#about" className="hover:text-slate-900 transition-colors">About</a>
           </div>
 
           <div className="flex items-center gap-4 relative z-50">
@@ -272,6 +271,9 @@ export default function Home() {
 
       {/* Screenshots Section */}
       <ScreenshotsCarousel />
+
+      {/* About Section */}
+      <AboutSection />
       
       {/* Footer minimal */}
       <footer className="border-t border-slate-100 py-12 px-6">
@@ -504,6 +506,86 @@ function ScreenshotsCarousel() {
             </motion.div>
           );
         })}
+      </div>
+    </section>
+  );
+}
+
+function AboutSection() {
+  return (
+    <section id="about" className="py-24 px-6 bg-[#FDFDFD] relative border-t border-slate-100">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+        <div className="md:w-1/2">
+          <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-rose-200 text-rose-600 text-sm font-medium bg-rose-50">
+            About Fetch
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-6">
+            Connecting Communities, <br />One Delivery at a Time
+          </h2>
+          <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+            Fetch is your ultimate local delivery and errand companion tailored for convenience. Whether you are craving food from your favorite local spot, need an important document fetched, or want to pay your bills without waiting in line, Fetch connects you to reliable local riders ready to assist you.
+          </p>
+          <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            With innovative features like <strong className="text-slate-900">PasaBuy</strong>, live map tracking, and seamless direct rider communication, we empower our riders to earn flexibly while ensuring customers enjoy an accessible, fully transparent, and seamless service.
+          </p>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+              <div className="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-4">
+                <Package className="w-6 h-6" />
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2">Our Mission</h3>
+              <p className="text-sm text-slate-600">Empowering local economies through fast and accessible transport.</p>
+            </div>
+            <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+              <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2">Community Trust</h3>
+              <p className="text-sm text-slate-600">Strictly vetted riders and real-time tracking for absolute peace of mind.</p>
+            </div>
+          </div>
+        </div>
+        <div className="md:w-1/2 relative">
+          <div className="absolute inset-0 bg-rose-100 rounded-[40px] transform rotate-3 scale-105 -z-10"></div>
+          <div className="bg-slate-900 p-12 rounded-[40px] shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+            
+            <div className="relative z-10 text-white">
+              <h3 className="text-3xl font-bold mb-4">For Customers</h3>
+              <ul className="space-y-4 mb-12">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-rose-500"></div>
+                  <span className="text-slate-300">Book instant rides and food delivery</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-rose-500"></div>
+                  <span className="text-slate-300">Request bills payment &amp; custom errands</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-rose-500"></div>
+                  <span className="text-slate-300">Share your location natively via chat</span>
+                </li>
+              </ul>
+              
+              <h3 className="text-3xl font-bold mb-4">For Riders</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  <span className="text-slate-300">Host your own PasaBuy transactions</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  <span className="text-slate-300">Earn at your own flexible pace</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  <span className="text-slate-300">Keep track of comprehensive analytics</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
