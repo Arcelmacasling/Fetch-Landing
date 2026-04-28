@@ -3,7 +3,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { 
-  Calendar, 
   Package, 
   Shield, 
   MapPin, 
@@ -19,6 +18,7 @@ import Link from "next/link";
 
 export default function Home() {
   const containerRef = useRef(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden relative">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center">
@@ -77,11 +77,32 @@ export default function Home() {
             >
               Download App <ChevronRight className="w-4 h-4" />
             </a>
-            <button className="md:hidden p-2 text-slate-600">
+            <button
+              type="button"
+              className="md:hidden p-2 text-slate-600"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
+            >
               <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
+
+        {mobileMenuOpen ? (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-lg">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3 text-sm font-medium text-slate-600">
+              <a href="#" className="text-slate-900 py-2" onClick={() => setMobileMenuOpen(false)}>Home</a>
+              <a href="#features" className="py-2 hover:text-slate-900 transition-colors" onClick={() => setMobileMenuOpen(false)}>Features</a>
+              <a href="#screenshots" className="py-2 hover:text-slate-900 transition-colors" onClick={() => setMobileMenuOpen(false)}>Screenshots</a>
+              <Link href="/manual" className="py-2 hover:text-slate-900 transition-colors" onClick={() => setMobileMenuOpen(false)}>Manual</Link>
+              <a href="#about" className="py-2 hover:text-slate-900 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <a href="/Fetch.apk" download="Fetch.apk" className="mt-2 inline-flex items-center justify-center gap-2 bg-slate-900 text-white px-5 py-3 rounded-xl text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Download App <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        ) : null}
       </nav>
 
       {/* Hero Section */}
@@ -111,7 +132,7 @@ export default function Home() {
             variants={fadeInUp}
             className="text-base sm:text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Experience the future of fetching tasks with our cutting-edge app. Whether it'apos;s a quick errand or a long-distance haul, we'apos;ve got you covered with reliable, fast, and secure service at your fingertips.
+            Experience the future of fetching tasks with our cutting-edge app. Whether it&apos;s a quick errand or a long-distance haul, we&apos;ve got you covered with reliable, fast, and secure service at your fingertips.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-30">
@@ -221,7 +242,7 @@ export default function Home() {
       <section id="features" className="py-20 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative z-40 bg-[#FDFDFD]">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
-            Everything You Need.<br />Nothing You Don'apos;t.
+            Everything You Need.<br />Nothing You Don&apos;t.
           </h2>
           <p className="text-slate-600 text-lg">
             Comprehensive delivery and fetching management designed with simplicity and reliability in mind.
@@ -249,7 +270,7 @@ export default function Home() {
           <FeatureCard 
             icon={<Activity className="text-purple-600" />}
             title="Real-Time Tracker"
-            description="Follow your package'apos;s live location with smart GPS updates and arrival estimates."
+            description="Follow your package&apos;s live location with smart GPS updates and arrival estimates."
             className="md:col-span-1 bg-slate-50"
           />
           

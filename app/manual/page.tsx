@@ -21,7 +21,7 @@ export default function ManualPage() {
       <main className="max-w-4xl mx-auto px-6 pt-36">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 text-center tracking-tight">Fetch User Manual</h1>
         <p className="text-lg text-slate-600 text-center mb-16 max-w-2xl mx-auto">
-          Welcome to Fetch! Whether you'apos;re a customer looking to get things done or a rider ready to earn, this guide will help you get started quickly and easily.
+          Welcome to Fetch! Whether you&apos;re a customer looking to get things done or a rider ready to earn, this guide will help you get started quickly and easily.
         </p>
 
         <section className="mb-16">
@@ -52,7 +52,7 @@ export default function ManualPage() {
               <h3 className="text-xl font-semibold mb-3">Using PasaBuy</h3>
               <ol className="list-decimal list-inside space-y-2">
                 <li>Open the <strong>PasaBuy feed</strong> on the Home screen to see what local riders are offering.</li>
-                <li>Tap on a rider'apos;s post and choose to <strong>Avail</strong> the item.</li>
+                <li>Tap on a rider&apos;s post and choose to <strong>Avail</strong> the item.</li>
                 <li>Once accepted, open the transaction chat.</li>
                 <li>Through chat, you can send messages, share your live location, and upload an image of your payment proof.</li>
               </ol>
@@ -63,7 +63,7 @@ export default function ManualPage() {
               <h3 className="text-xl font-semibold mb-3">Managing Your Activity</h3>
               <ol className="list-decimal list-inside space-y-2">
                 <li>Open the <strong>Activity</strong> tab to monitor updates on your current tasks.</li>
-                <li>Open the tracking view when prompted to see the rider'apos;s progress.</li>
+                <li>Open the tracking view when prompted to see the rider&apos;s progress.</li>
                 <li>Visit your <strong>Transaction History</strong> to review past avails and completed tasks.</li>
                 <li>Use the <strong>Profile</strong> tab anytime to update your information and photo.</li>
               </ol>
@@ -138,7 +138,7 @@ export default function ManualPage() {
           <ul className="space-y-4 text-slate-700">
             <li className="flex items-start">
               <span className="font-bold mr-2 text-rose-600">•</span>
-              <span><strong>Not receiving notifications?</strong> Check your phone'apos;s system settings and ensure permissions for the Fetch app are enabled.</span>
+              <span><strong>Not receiving notifications?</strong> Check your phone&apos;s system settings and ensure permissions for the Fetch app are enabled.</span>
             </li>
             <li className="flex items-start">
               <span className="font-bold mr-2 text-rose-600">•</span>
