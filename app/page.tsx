@@ -49,10 +49,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-hidden relative">
+    <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden relative">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center">
               <Package className="w-5 h-5 text-white" />
@@ -85,11 +85,11 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section ref={containerRef} className="relative pt-36 pb-20 px-6 max-w-7xl mx-auto h-[120vh] md:h-[130vh]">
+      <section ref={containerRef} className="relative pt-28 sm:pt-32 md:pt-36 pb-16 md:pb-20 px-4 sm:px-6 max-w-7xl mx-auto min-h-[100svh] md:min-h-[130vh]">
         <AnimatedMapBackground />
         
         <motion.div 
-          className="relative z-20 text-center max-w-4xl mx-auto sticky top-36"
+          className="relative z-20 text-center max-w-4xl mx-auto sticky top-24 md:top-36"
           initial="initial"
           animate="animate"
           variants={stagger}
@@ -102,14 +102,14 @@ export default function Home() {
           
           <motion.h1 
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1]"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-tight md:leading-[1.1]"
           >
             One Call Away Riders!<br />Anytime, Anywhere.
           </motion.h1>
 
           <motion.p 
             variants={fadeInUp}
-            className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             Experience the future of fetching tasks with our cutting-edge app. Whether it'apos;s a quick errand or a long-distance haul, we'apos;ve got you covered with reliable, fast, and secure service at your fingertips.
           </motion.p>
@@ -130,13 +130,13 @@ export default function Home() {
         </motion.div>
 
         {/* Floating Mockups Area */}
-        <div className="mt-20 relative h-[400px] md:h-[600px] w-full max-w-5xl mx-auto z-30 pointer-events-none sticky top-96">
+        <div className="mt-12 md:mt-20 relative h-[300px] sm:h-[360px] md:h-[600px] w-full max-w-5xl mx-auto z-30 pointer-events-none md:sticky md:top-96">
           <motion.div 
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, type: "spring" }}
             style={{ y: yCenter, opacity: opacityCenter }}
-            className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[280px] md:w-[320px] h-[500px] bg-white rounded-t-[40px] shadow-2xl border-[8px] border-slate-900 overflow-hidden flex flex-col pointer-events-auto"
+            className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[220px] h-[390px] sm:w-[260px] sm:h-[460px] md:w-[320px] md:h-[500px] bg-white rounded-t-[40px] shadow-2xl border-[8px] border-slate-900 overflow-hidden flex flex-col pointer-events-auto"
           >
             <div className="w-32 h-6 bg-slate-900 mx-auto rounded-b-2xl mb-6 shadow-sm"></div>
             <div className="px-6 flex-1">
@@ -218,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* Features Outline */}
-      <section id="features" className="py-24 px-6 max-w-7xl mx-auto relative z-40 bg-[#FDFDFD]">
+      <section id="features" className="py-20 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative z-40 bg-[#FDFDFD]">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
             Everything You Need.<br />Nothing You Don'apos;t.
@@ -228,7 +228,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FeatureCard 
             icon={<MapPin className="text-rose-600" />}
             title="Instant Rider Booking"
@@ -236,7 +236,7 @@ export default function Home() {
             className="md:col-span-1 bg-slate-50"
           />
           
-          <div className="md:col-span-1 md:row-span-2 rounded-[32px] bg-rose-300/40 p-8 flex flex-col justify-end min-h-[400px] relative overflow-hidden group">
+          <div className="md:col-span-1 md:row-span-2 rounded-[32px] bg-rose-300/40 p-6 sm:p-8 flex flex-col justify-end min-h-[300px] md:min-h-[400px] relative overflow-hidden group">
             <div className="absolute inset-x-8 -bottom-10 h-[80%] bg-white rounded-t-[32px] border-[6px] border-slate-900 shadow-xl transition-transform group-hover:-translate-y-4 duration-500 p-6 flex flex-col items-center">
               <div className="w-16 h-4 bg-slate-900 rounded-b-xl -mt-6 mb-6 flex-shrink-0"></div>
               <div className="w-full flex items-center gap-3 bg-rose-50 p-3 rounded-2xl mb-4 border border-rose-100">
@@ -454,7 +454,7 @@ function ScreenshotsCarousel() {
         </p>
       </div>
 
-      <div className="relative flex justify-center items-center h-[550px] w-full max-w-[100vw] mx-auto z-10 perspective-1000">
+      <div className="relative flex justify-center items-center h-[380px] sm:h-[460px] md:h-[550px] w-full max-w-[100vw] mx-auto z-10 perspective-1000">
         {mockups.map((src, index) => {
           let offset = index - activeIndex;
           const half = Math.floor(mockups.length / 2);
@@ -464,7 +464,7 @@ function ScreenshotsCarousel() {
           const isCenter = offset === 0;
           const absOffset = Math.abs(offset);
           
-          const x = offset * 240; 
+          const x = offset * 180; 
           let scale = isCenter ? 1 : 0.85;
           let opacity = isCenter ? 1 : 0.4;
           const zIndex = 10 - absOffset;
@@ -488,7 +488,7 @@ function ScreenshotsCarousel() {
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1] 
               }}
-              className="absolute w-[260px] h-[520px] rounded-[40px] border-[6px] border-slate-800 bg-slate-950 overflow-hidden shadow-2xl flex flex-col justify-between"
+              className="absolute w-[190px] h-[380px] sm:w-[220px] sm:h-[440px] md:w-[260px] md:h-[520px] rounded-[40px] border-[6px] border-slate-800 bg-slate-950 overflow-hidden shadow-2xl flex flex-col justify-between"
             >
               {/* Fake status bar at the top */}
               <div className="h-6 w-full absolute top-0 inset-x-0 z-20 flex justify-end items-center px-4 gap-1">
@@ -513,22 +513,22 @@ function ScreenshotsCarousel() {
 
 function AboutSection() {
   return (
-    <section id="about" className="py-24 px-6 bg-[#FDFDFD] relative border-t border-slate-100">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+    <section id="about" className="py-20 md:py-24 px-4 sm:px-6 bg-[#FDFDFD] relative border-t border-slate-100">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-center">
         <div className="md:w-1/2">
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-rose-200 text-rose-600 text-sm font-medium bg-rose-50">
             About Fetch
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-6">
             Connecting Communities, <br />One Delivery at a Time
           </h2>
-          <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 mb-6 leading-relaxed">
             Fetch is your ultimate local delivery and errand companion tailored for convenience. Whether you are craving food from your favorite local spot, need an important document fetched, or want to pay your bills without waiting in line, Fetch connects you to reliable local riders ready to assist you.
           </p>
-          <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed">
             With innovative features like <strong className="text-slate-900">PasaBuy</strong>, live map tracking, and seamless direct rider communication, we empower our riders to earn flexibly while ensuring customers enjoy an accessible, fully transparent, and seamless service.
           </p>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100">
               <div className="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-4">
                 <Package className="w-6 h-6" />
@@ -545,14 +545,14 @@ function AboutSection() {
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 relative">
+        <div className="md:w-1/2 relative w-full">
           <div className="absolute inset-0 bg-rose-100 rounded-[40px] transform rotate-3 scale-105 -z-10"></div>
-          <div className="bg-slate-900 p-12 rounded-[40px] shadow-2xl relative overflow-hidden">
+          <div className="bg-slate-900 p-8 sm:p-12 rounded-[32px] sm:rounded-[40px] shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
             
             <div className="relative z-10 text-white">
-              <h3 className="text-3xl font-bold mb-4">For Customers</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">For Customers</h3>
               <ul className="space-y-4 mb-12">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-rose-500"></div>
@@ -568,7 +568,7 @@ function AboutSection() {
                 </li>
               </ul>
               
-              <h3 className="text-3xl font-bold mb-4">For Riders</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">For Riders</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
