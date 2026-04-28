@@ -71,8 +71,8 @@ export default function Home() {
           <div className="flex items-center gap-4 relative z-50">
             {/* Download Button */}
             <a 
-              href="/app-release.apk" 
-              download="FetchMalaybalayApp.apk"
+              href="/Fetch.apk" 
+              download="Fetch.apk"
               className="hidden md:flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all active:scale-95 shadow-sm"
             >
               Download App <ChevronRight className="w-4 h-4" />
@@ -116,8 +116,8 @@ export default function Home() {
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-30">
             <a 
-              href="/app-release.apk" 
-              download="FetchMalaybalayApp.apk"
+              href="/Fetch.apk" 
+              download="Fetch.apk"
               className="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-xl text-base font-medium hover:bg-slate-800 transition-all hover:shadow-xl hover:-translate-y-0.5 relative z-30"
             >
               <Smartphone className="w-6 h-6" />
