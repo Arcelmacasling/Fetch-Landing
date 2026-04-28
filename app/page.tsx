@@ -417,13 +417,18 @@ function AnimatedMapBackground() {
 }
 
 function ScreenshotsCarousel() {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(0);
   const mockups = [
     "/Screenshots/Screenshot_2026-04-28-23-01-12-21_26728033935703b5a43078abc05f9514.jpg",
     "/Screenshots/Screenshot_2026-04-28-23-01-16-34_26728033935703b5a43078abc05f9514.jpg",
     "/Screenshots/Screenshot_2026-04-28-23-01-18-65_26728033935703b5a43078abc05f9514.jpg",
     "/Screenshots/Screenshot_2026-04-28-23-01-20-77_26728033935703b5a43078abc05f9514.jpg",
     "/Screenshots/Screenshot_2026-04-28-23-01-22-88_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-02-33-86_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-03-03-75_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-03-08-67_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-42-44-12_45801244c86e4081f73ecc2d59f16bca.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-47-25-00_45801244c86e4081f73ecc2d59f16bca.jpg",
   ];
 
   useEffect(() => {
@@ -450,8 +455,9 @@ function ScreenshotsCarousel() {
       <div className="relative flex justify-center items-center h-[550px] w-full max-w-[100vw] mx-auto z-10 perspective-1000">
         {mockups.map((src, index) => {
           let offset = index - activeIndex;
-          if (offset < -2) offset += mockups.length;
-          if (offset > 2) offset -= mockups.length;
+          const half = Math.floor(mockups.length / 2);
+          if (offset > half) offset -= mockups.length;
+          else if (offset < -half) offset += mockups.length;
 
           const isCenter = offset === 0;
           const absOffset = Math.abs(offset);
