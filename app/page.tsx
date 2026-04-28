@@ -419,11 +419,11 @@ function AnimatedMapBackground() {
 function ScreenshotsCarousel() {
   const [activeIndex, setActiveIndex] = useState(2);
   const mockups = [
-    "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=400&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=400&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1616832880334-b1004d9808da?q=80&w=400&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1544158444-245be5d8eb82?q=80&w=400&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop", 
+    "/Screenshots/Screenshot_2026-04-28-23-01-12-21_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-01-16-34_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-01-18-65_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-01-20-77_26728033935703b5a43078abc05f9514.jpg",
+    "/Screenshots/Screenshot_2026-04-28-23-01-22-88_26728033935703b5a43078abc05f9514.jpg",
   ];
 
   useEffect(() => {
